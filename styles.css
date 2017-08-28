@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(to bottom, #002650 0%,#3b57a6 100%);
+}
+.body-wrapper {
+    margin: 0px auto;
+    max-width: 680px;
+    overflow: auto;
+    text-align: center;
+}
+.header {
+    min-width: 680px;
+    height: 100px;
+}
+.content {
+
+}
+.logo {
+}
+.search-logo {
+    left: 15px;
+}
+#search-input {
+    border-radius: 7px;
+    height: 32px;
+    width: 256px;
+}
+.btn {
+    border-radius: 7px;
+    height: 32px;
+}
+.btn-default {
+    background-color: #1AA422;
+}
+table {
+    color: white;
+}
+#result-table {
+    display: none;
+}
