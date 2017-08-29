@@ -1,6 +1,7 @@
-html * {
+html {
     font-family: sans-serif !important;
     font-size: 14pt;
+    height: 100%;
 }
 
 body {
@@ -16,11 +17,11 @@ ul {
 
 .body-wrapper {
     margin: 0px auto;
-    max-width: 600px;
+    max-width: 680px;
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 680px) {
     html * {
         font-size: 20pt;
     }
@@ -31,7 +32,7 @@ ul {
 .header {
     height: 75px;
     width: 100%;
-    background-image: url(UI/assets/logo.svg);
+    background-image: url(./../assets/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -51,7 +52,7 @@ ul {
     padding-left: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.5);
-    background-image: url(UI/assets/search.svg);
+    background-image: url(./../assets/search.svg);
     background-repeat: no-repeat;
     background-position: 15px 15px;
     background-size: 20px 20px;
