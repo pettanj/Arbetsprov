@@ -1,39 +1,121 @@
+html * {
+    font-family: sans-serif !important;
+    font-size: 14pt;
+}
+
 body {
     background: linear-gradient(to bottom, #002650 0%,#3b57a6 100%);
 }
-.body-wrapper {
-    margin: 0px auto;
-    max-width: 680px;
-    overflow: auto;
+
+ul {
+    list-style-type: none;
+    color: white;
+    padding: 0;
     text-align: center;
 }
-.header {
-    min-width: 680px;
-    height: 100px;
-}
-.content {
 
+.body-wrapper {
+    margin: 0px auto;
+    max-width: 600px;
+    text-align: center;
 }
-.logo {
+
+@media (min-width: 600px) {
+    html * {
+        font-size: 20pt;
+    }
+    .header {
+        height: 100px !important;
+    }
 }
-.search-logo {
-    left: 15px;
+.header {
+    height: 75px;
+    width: 100%;
+    background-image: url(UI/assets/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
+
+.content {
+    max-width: 100%;
+}
+
 #search-input {
-    border-radius: 7px;
-    height: 32px;
-    width: 256px;
-}
-.btn {
-    border-radius: 7px;
-    height: 32px;
-}
-.btn-default {
-    background-color: #1AA422;
-}
-table {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(UI/assets/search.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    background-size: 20px 20px;
     color: white;
 }
+
 #result-table {
+    margin-top: 100px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    border: none;
     display: none;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#result-table tbody {
+    display: table-row-group;
+    width: 100%;
+}
+
+#result-table tr {
+    line-height: 50px;
+    height: 100px;
+    width: 100%;
+}
+
+#result-table tr:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+#result-table td {
+    height: 100%;
+}
+
+.delete-column {
+    width: 50px;
+    background-color: rgba(190, 1, 1, 0.4);
+}
+
+.delete-button {
+    font-size: 14pt;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    color: #BBBBBB;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #BBBBBB;
+    border-radius: 12.5px;
+}
+
+.delete-button:hover {
+    border-color: #6D6D6D;
+    color: #6D6D6D;
+}
+#partial-search-result {
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    border: 1px solid #A4A4A4;
 }
