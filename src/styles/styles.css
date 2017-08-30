@@ -1,0 +1,133 @@
+html {
+    height: 100%;
+}
+html * {
+    font-family: sans-serif !important;
+    font-size: 12pt;
+}
+
+body {
+    background: linear-gradient(to bottom, #002650 0%,#3b57a6 100%);
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+}
+
+.body-wrapper {
+    margin: 0px auto;
+    max-width: 680px;
+    text-align: center;
+}
+
+@media (min-width: 680px) {
+    html * {
+        font-size: 16pt;
+    }
+    .header {
+        height: 100px !important;
+    }
+}
+.header {
+    height: 75px;
+    width: 100%;
+    background-image: url(./../assets/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.content {
+    max-width: 100%;
+}
+
+.search-input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(./../assets/search.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    background-size: 20px 20px;
+    color: white;
+}
+
+.search-input::-webkit-input-placeholder {
+    color: white;
+}
+
+.search-input::-moz-placeholder {
+    color: white;
+}
+
+.search-input::-ms-input-placeholder {
+    color: white;
+}
+
+.result-table {
+    margin-top: 100px;
+    color: white;
+    display: none;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+}
+
+.result-table tbody {
+    width: 100%;
+}
+
+.result-table tr {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.result-table tr:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.result-table td {
+    height: 50px;
+    line-height: 1;
+}
+
+.name-column {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.time-column {
+    text-align: right;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+.delete-column {
+    width: 50px;
+    background-color: rgba(190, 1, 1, 0.4);
+}
+
+.delete-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #BBBBBB;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: auto;
+    background-image: url(./../assets/cross.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
