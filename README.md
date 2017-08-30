@@ -1,20 +1,18 @@
-Instructions
-* Fork the repository
-* Create a Feature Branch
-* Implement a simple search function according to wireframes and UI (attached on github)
-* The search should use a public REST API of your choice using JavaScript
-* Search for title, return title (or something like that)
-* Display partial search results in a list beneath the search field
-* When hitting [ENTER] the selected search value should be saved with date/timestamp beneath the search box (as a search history)
-* The page should be responsive, so that if width of window is changed it should adapt
-* Nothing needs to be saved if the page is reloaded (i.e don’t have to use cookies/database etc)
- 
-What we look at
-* How’s HTML/CSS/JS written?
-* How is it packaged?
-* General sanity check on structure and solution
-* Is there a readme file giving enough instructions to start your solution?
- 
-Solve the task as far as you think is necessary. For this specific assignment focus on HTML/CSS, structure and good coding standards rather than advanced JS.
- 
-When done push your branch and let us know it’s done, e.g. by a pull request.
+# Search function Implemented in HTML, CSS and JavaScript by Petrus Jonsson
+## Instructions
+The application can be started by opening src/index.html in a web browser or running a basic web server(for example http-server) in src/.
+
+## API
+I used an open REST API with countries: https://restcountries.eu/rest/v2/
+
+## The task
+My intention was to use the appropriate amount of tools, libraries and frameworks for the task. I decided to use HTML, CSS and JavaScript without framework and only one very lightweight JavaScript library for auto-correct. I could have implemented the auto-correct functionality myself but since the instructions told me not to focus on advanced JavaScript I thought it would be unneccesary to reinvent it in this specific task.
+
+### Build system/bundler
+I did not use any bundlers or build system in this task because my choice of tools did not require any. I have experience using Gulp and Webpack, which I could have use if needed.
+
+### JavaScript
+I could have solved this task using AngularJs, Angular 4, React or using JQuery too, but now I did it in plain JavaScript for simplicity and to show that I can use only JavaScript as well.
+
+### Styling
+Since this was a rather small application I used CSS3 without any pre-processors. I am very comfortable in SASS as well, but that would require some sort of bundler or build system which would make the application more complicated than it needs to.
