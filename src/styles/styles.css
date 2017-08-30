@@ -1,7 +1,9 @@
 html {
-    font-family: sans-serif !important;
-    font-size: 14pt;
     height: 100%;
+}
+html * {
+    font-family: sans-serif !important;
+    font-size: 12pt;
 }
 
 body {
@@ -23,7 +25,7 @@ ul {
 
 @media (min-width: 680px) {
     html * {
-        font-size: 20pt;
+        font-size: 16pt;
     }
     .header {
         height: 100px !important;
@@ -42,7 +44,7 @@ ul {
     max-width: 100%;
 }
 
-#search-input {
+.search-input {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -59,37 +61,56 @@ ul {
     color: white;
 }
 
-#result-table {
+.search-input::-webkit-input-placeholder {
+    color: white;
+}
+
+.search-input::-moz-placeholder {
+    color: white;
+}
+
+.search-input::-ms-input-placeholder {
+    color: white;
+}
+
+.result-table {
     margin-top: 100px;
     color: white;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    border: none;
     display: none;
     width: 100%;
     position: relative;
     text-align: center;
-    border-collapse: collapse;
-    border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0 2px;
 }
 
-#result-table tbody {
-    display: table-row-group;
+.result-table tbody {
     width: 100%;
 }
 
-#result-table tr {
-    line-height: 50px;
-    height: 100px;
+.result-table tr {
+    background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
 }
 
-#result-table tr:hover {
-    background-color: rgba(255, 255, 255, .1);
+.result-table tr:hover {
+    background-color: rgba(255, 255, 255, .2);
 }
 
-#result-table td {
-    height: 100%;
+.result-table td {
+    height: 50px;
+    line-height: 1;
+}
+
+.name-column {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.time-column {
+    text-align: right;
+    padding-right: 20px;
+    white-space: nowrap;
 }
 
 .delete-column {
@@ -98,25 +119,16 @@ ul {
 }
 
 .delete-button {
-    font-size: 14pt;
-    height: 25px;
-    width: 25px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     color: #BBBBBB;
-    background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-width: 1px;
-    border-color: #BBBBBB;
-    border-radius: 12.5px;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: auto;
+    background-image: url(./../assets/cross.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.delete-button:hover {
-    border-color: #6D6D6D;
-    color: #6D6D6D;
-}
-#partial-search-result {
-    position: absolute;
-    top: 18px;
-    width: 100%;
-    border: 1px solid #A4A4A4;
-}

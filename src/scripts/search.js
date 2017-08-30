@@ -6,15 +6,14 @@
 var url = "https://restcountries.eu/rest/v2/name/",
   partialResult = [],
   resultHistory = [],
-  $search = document.getElementById("search-input"),
-  $results = document.getElementById("result-table");
-
+  $search = document.getElementsByClassName("search-input")[0],
+  $results = document.getElementsByClassName("result-table")[0];
 /*
  * Define auto-complete object with data source and on-select
  */
 
 var ac = new autoComplete({
-  selector: '#search-input',
+  selector: '.search-input',
   minChars: 1,
   source: function (country, response) {
     getCountries(country.toLowerCase()).then(function (data) {
@@ -62,6 +61,7 @@ function removeItem(name, node) {
  */
 function addName(tr, name) {
   var column = document.createElement("TD");
+  column.classList.add("name-column");
   column.innerHTML = name;
   tr.appendChild(column);
 }
@@ -74,6 +74,7 @@ function addName(tr, name) {
 function addTimeStamp(tr) {
   var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
   var column = document.createElement("TD");
+  column.classList.add("time-column");
   column.innerHTML = new Date().toLocaleDateString("sv-se", options);
   tr.appendChild(column);
 }
@@ -81,15 +82,14 @@ function addTimeStamp(tr) {
 /**
  * @desc Add column with delete button to given TR
  * @method addDelete
- * @param {Object} tr - row element 
+ * @param {Object} tr - row element
  * @param {String} country - Country name
  */
 function addDelete(tr, country) {
   var column = document.createElement("TD");
-  column.setAttribute("class", "delete-column");
+  column.classList.add("delete-column");
   var deleteBtn = document.createElement("BUTTON");
-  deleteBtn.setAttribute("class", "delete-button")
-  deleteBtn.innerHTML = "X";
+  deleteBtn.classList.add("delete-button");
   deleteBtn.onclick = function () { removeItem(country, tr) };
   column.appendChild(deleteBtn);
   tr.appendChild(column);
@@ -97,10 +97,10 @@ function addDelete(tr, country) {
 
 /**
  * @desc Saves a country to search history.
- * Create a row element and add appropriate columns 
+ * Create a row element and add appropriate columns
  * then appending created row to search history
  * @method saveItem
- * @param {String} country - Name of country to be saved 
+ * @param {String} country - Name of country to be saved
  */
 function saveItem(country) {
   $results.setAttribute("style", "display: table;")
